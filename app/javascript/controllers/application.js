@@ -1,13 +1,13 @@
-import { Application } from "@hotwired/stimulus"
-import Sortable from "stimulus-sortable"
-import NestedForm from 'stimulus-rails-nested-form'
+import { Application } from "@hotwired/stimulus";
+import Sortable from "stimulus-sortable";
+import NestedForm from "stimulus-rails-nested-form";
 
-const application = Application.start()
-application.register('sortable', Sortable)
-application.register('nested-form', NestedForm)
+const application = Application.start();
+application.register("sortable", Sortable);
+application.register("nested-form", NestedForm);
 
 // Configure Stimulus development experience
-application.debug = false
-window.Stimulus   = application
+application.debug = false;
+window.Stimulus = application;
 
-export { application }
+export { application };

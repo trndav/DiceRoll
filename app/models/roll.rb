@@ -2,7 +2,7 @@ class Roll < ApplicationRecord
   belongs_to :user
   has_many :dice_rolls, dependent: :destroy
 
-  accepts_nested_attribute_for :dice_rolls, allow_destroy: true, reject_if: :all_blank
+  accepts_nested_attributes_for :dice_rolls, allow_destroy: true, reject_if: :all_blank
   scope :ordered, -> { order(created_at: :desc) } 
 
   def total 
